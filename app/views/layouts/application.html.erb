@@ -9,20 +9,22 @@
 <body>
 	<header>
 			<div class="col-xs-3">
-				<div class="circle">
-				  <br />
-				  You know
-				  <br />
-				  you need
-				  <br />
-				  to code
-				</div>
+				<%= link_to root_path, class: 'logo' do %>
+					<div class="circle">
+					  <br />
+					  You know
+					  <br />
+					  you need
+					  <br />
+					  to code
+					</div>
+				<% end %>
 			</div>
 			<div class="col-xs-3 slogan">
 				Splurting out unsolicited advice about entrepreneurship since 2016
 			</div>
 			<div class="col-xs-5 links">
-				<%= link_to 'Contribute', '#' %>
+				<%= link_to 'Contribute', new_quote_path %>
 				<%= link_to 'About', '#' %>
 			</div>
 	</header>
@@ -30,7 +32,21 @@
 <hr />
 <br class="clear" />
 
-<%= yield %>
+	<div class="container">
+		<%= yield %>
+	</div>
+
+	  <div class="footer">
+	    <div class="container">
+		      <div class="col-xs-6">
+	        	<%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
+	      	  </div>
+		      <div class="col-xs-6 footer-blurb">
+		        Proudly hacked in Houston, TX by <a href="https://www.linkedin.com/in/prakash-venkitachalam-5626925">Prakash</a><br />
+		        Want to build your own Splurty Web App - <a href="http://thefirehoseproject.com">Learn how to code here</a>
+		      </div>
+	    </div>
+	  </div>
 
 </body>
 </html>

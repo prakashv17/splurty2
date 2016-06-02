@@ -1,0 +1,7 @@
+<h1>Enter the new Quote</h1>
+<%=	simple_form_for @quote do |f| %>
+	<%=	f.input :saying	%>
+	<%=	f.input :author	%>
+	<br />
+	<%=	f.submit :'Create new Quote', class: "btn btn-success"%>
+<% end %>
